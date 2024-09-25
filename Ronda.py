@@ -1,12 +1,4 @@
-class Jugador:
-    def __init__(self, nombre, fichas):
-        self.nombre = nombre
-        self.fichas = fichas
-
-    def __str__(self):
-        return f"{self.nombre}, {self.fichas} fichas"
-
-
+from Jugador import Jugador
 class Ronda:
     def __init__(self):
         self.jugadores = []
@@ -15,12 +7,14 @@ class Ronda:
         return "\n".join(str(jugador) for jugador in self.jugadores)
 
     def agregarJugador(self, jugador):
-        if jugador.fichas <= 0:
+        j = Jugador("Tomas")
+        if  j.fichas <= 0:
             raise ValueError("El jugador no tiene fichas para jugar.")
-        self.jugadores.append(jugador)
+        self.jugadores.append(j)
 
     def sacarJugadoresSinFichas(self):
-        self.jugadores = [jugador for jugador in self.jugadores if jugador.fichas > 0]
+        j = Jugador("Tomas")
+        self.jugadores = [jugador for jugador in self.jugadores if j.fichas > 0]
 
     def jugadorEnTurno(self):
         if self.jugadores:

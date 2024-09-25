@@ -6,7 +6,7 @@ from Ronda import Ronda
 
 
 
-jugador1 = Jugador("Tomás", 15)
+jugador1 = Jugador("Tomas", 15)
 jugador2 = Jugador("Andrés", 5)
 jugador3 = Jugador("Lucía", 0)
 jugador4 = Jugador("Marta", 10)
